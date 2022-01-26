@@ -16,10 +16,11 @@ let s:palette = {
   \ 'g0': ['#34333e', '237'],
   \ 'g1': ['#3b3947', '238'],
   \ 'g2': ['#42404e', '240'],
-  \ 'g3': ['#7e7b8b', '247'],
-  \ 'g4': ['#bebdc6', '248'],
-  \ 'g5': ['#c8c7cd', '250'],
-  \ 'g6': ['#d1d0d7', '252'],
+  \ 'g3': ['#7e7b8b', '246'],
+  \ 'g4': ['#b4b2bd', '247'],
+  \ 'g5': ['#bebdc6', '249'],
+  \ 'g6': ['#c8c7cd', '250'],
+  \ 'g7': ['#d1d0d7', '252'],
   \ 'r': ['#cc5655', '167'],
   \ 'g': ['#4aad78', '72'],
   \ 'y': ['#c99a68', '173'],
@@ -32,7 +33,7 @@ let s:palette = {
   \ 'lb': ['#93b2e5', '122'],
   \ 'lm': ['#bd9bdc', '146'],
   \ 'lc': ['#6ebdc2', '79'],
-  \ 'none': ['NONE',      'NONE']
+  \ 'none': ['NONE', 'NONE']
   \ }
 
 function! s:hi(group, fg, bg, ...)
@@ -54,12 +55,12 @@ function! s:hi(group, fg, bg, ...)
       \ 'NONE')
 endfunction
 
-call s:hi('Normal', s:palette.g5, s:palette.bg)
-call s:hi('Terminal', s:palette.g5, s:palette.bg)
+call s:hi('Normal', s:palette.g4, s:palette.bg)
+call s:hi('Terminal', s:palette.g4, s:palette.bg)
 call s:hi('EndOfBuffer', s:palette.bg, s:palette.bg)
 call s:hi('Folded', s:palette.g3, s:palette.g1)
 call s:hi('ToolbarLine', s:palette.g5, s:palette.g2)
-call s:hi('SignColumn', s:palette.g5, s:palette.none)
+call s:hi('SignColumn', s:palette.g4, s:palette.none)
 call s:hi('FoldColumn', s:palette.g5, s:palette.g2)
 call s:hi('IncSearch', s:palette.bg, s:palette.m)
 call s:hi('Search', s:palette.bg, s:palette.c)
@@ -90,13 +91,13 @@ call s:hi('DiffText', s:palette.b, s:palette.none)
 call s:hi('Directory', s:palette.g, s:palette.none)
 call s:hi('ErrorMsg', s:palette.r, s:palette.none, 'bold,underline')
 call s:hi('WarningMsg', s:palette.y, s:palette.none, 'bold')
-call s:hi('ModeMsg', s:palette.g5, s:palette.none, 'bold')
+call s:hi('ModeMsg', s:palette.g4, s:palette.none, 'bold')
 call s:hi('MoreMsg', s:palette.b, s:palette.none, 'bold')
 call s:hi('MatchParen', s:palette.none, s:palette.g3)
 call s:hi('NonText', s:palette.g4, s:palette.none)
 call s:hi('Whitespace', s:palette.g4, s:palette.none)
 call s:hi('SpecialKey', s:palette.g4, s:palette.none)
-call s:hi('Pmenu', s:palette.g5, s:palette.g1)
+call s:hi('Pmenu', s:palette.g6, s:palette.g1)
 call s:hi('PmenuSbar', s:palette.none, s:palette.g1)
 call s:hi('PmenuSel', s:palette.g0, s:palette.c)
 highlight! link WildMenu PmenuSel
@@ -109,10 +110,10 @@ call s:hi('SpellLocal', s:palette.none, s:palette.none, 'undercurl', s:palette.b
 call s:hi('SpellRare', s:palette.none, s:palette.none, 'undercurl', s:palette.m)
 call s:hi('StatusLine', s:palette.g5, s:palette.g2)
 call s:hi('StatusLineTerm', s:palette.g5, s:palette.g2)
-call s:hi('StatusLineNC', s:palette.g4, s:palette.g1)
-call s:hi('StatusLineTermNC', s:palette.g4, s:palette.g1)
-call s:hi('TabLine', s:palette.g5, s:palette.g4)
-call s:hi('TabLineFill', s:palette.g4, s:palette.g1)
+call s:hi('StatusLineNC', s:palette.g5, s:palette.g1)
+call s:hi('StatusLineTermNC', s:palette.g5, s:palette.g1)
+call s:hi('TabLine', s:palette.g6, s:palette.g5)
+call s:hi('TabLineFill', s:palette.g5, s:palette.g0)
 call s:hi('TabLineSel', s:palette.bg, s:palette.m)
 call s:hi('VertSplit', s:palette.g1, s:palette.none)
 call s:hi('Visual', s:palette.none, s:palette.g3)
@@ -203,17 +204,18 @@ call s:hi('Function', s:palette.b, s:palette.none)
 call s:hi('Operator', s:palette.m, s:palette.none)
 call s:hi('Title', s:palette.m, s:palette.none, 'bold')
 call s:hi('Tag', s:palette.y, s:palette.none)
-call s:hi('Delimiter', s:palette.g5, s:palette.none)
+call s:hi('Delimiter', s:palette.g4, s:palette.none)
 call s:hi('Comment', s:palette.g2, s:palette.none, 'italic')
 call s:hi('SpecialComment', s:palette.g4, s:palette.none, 'italic')
 call s:hi('Todo', s:palette.r, s:palette.none, 'italic')
 call s:hi('Ignore', s:palette.g4, s:palette.none)
 call s:hi('Underlined', s:palette.none, s:palette.none, 'underline')
+call s:hi('markdownUrl', s:palette.lb, s:palette.none, 'underline')
 
 
-call s:hi('Fg', s:palette.g5, s:palette.none)
-call s:hi('Bright', s:palette.g6, s:palette.none)
-call s:hi('BrightItalic', s:palette.g6, s:palette.none, 'italic')
+call s:hi('Fg', s:palette.g4, s:palette.none)
+call s:hi('Bright', s:palette.g7, s:palette.none)
+call s:hi('BrightItalic', s:palette.g7, s:palette.none, 'italic')
 call s:hi('Grey', s:palette.g4, s:palette.none)
 call s:hi('Red', s:palette.r, s:palette.none)
 call s:hi('Yellow', s:palette.y, s:palette.none)
@@ -221,24 +223,36 @@ call s:hi('Green', s:palette.g, s:palette.none)
 call s:hi('Cyan', s:palette.c, s:palette.none)
 call s:hi('Blue', s:palette.b, s:palette.none)
 call s:hi('Purple', s:palette.m, s:palette.none)
-call s:hi('RedBright', s:palette.lr, s:palette.none)
-call s:hi('YellowBright', s:palette.ly, s:palette.none)
-call s:hi('GreenBright', s:palette.lg, s:palette.none)
-call s:hi('CyanBright', s:palette.lc, s:palette.none)
-call s:hi('BlueBright', s:palette.lb, s:palette.none)
-call s:hi('PurpleBright', s:palette.lm, s:palette.none)
+call s:hi('BrightRed', s:palette.lr, s:palette.none)
+call s:hi('BrightYellow', s:palette.ly, s:palette.none)
+call s:hi('BrightGreen', s:palette.lg, s:palette.none)
+call s:hi('BrightCyan', s:palette.lc, s:palette.none)
+call s:hi('BrightBlue', s:palette.lb, s:palette.none)
+call s:hi('BrightPurple', s:palette.lm, s:palette.none)
 call s:hi('RedBold', s:palette.r, s:palette.none, 'bold')
 call s:hi('YellowBold', s:palette.y, s:palette.none, 'bold')
 call s:hi('GreenBold', s:palette.g, s:palette.none, 'bold')
 call s:hi('CyanBold', s:palette.c, s:palette.none, 'bold')
 call s:hi('BlueBold', s:palette.b, s:palette.none, 'bold')
 call s:hi('PurpleBold', s:palette.m, s:palette.none, 'bold')
+call s:hi('BrightRedBold', s:palette.lr, s:palette.none, 'bold')
+call s:hi('BrightYellowBold', s:palette.ly, s:palette.none, 'bold')
+call s:hi('BrightGreenBold', s:palette.lg, s:palette.none, 'bold')
+call s:hi('BrightCyanBold', s:palette.lc, s:palette.none, 'bold')
+call s:hi('BrightBlueBold', s:palette.lb, s:palette.none, 'bold')
+call s:hi('BrightPurpleBold', s:palette.lm, s:palette.none, 'bold')
 call s:hi('RedItalic', s:palette.r, s:palette.none, 'italic')
 call s:hi('YellowItalic', s:palette.y, s:palette.none, 'italic')
 call s:hi('GreenItalic', s:palette.g, s:palette.none, 'italic')
 call s:hi('CyanItalic', s:palette.c, s:palette.none, 'italic')
 call s:hi('BlueItalic', s:palette.b, s:palette.none, 'italic')
 call s:hi('PurpleItalic', s:palette.m, s:palette.none, 'italic')
+call s:hi('BrightRedItalic', s:palette.lr, s:palette.none, 'italic')
+call s:hi('BrightYellowItalic', s:palette.ly, s:palette.none, 'italic')
+call s:hi('BrightGreenItalic', s:palette.lg, s:palette.none, 'italic')
+call s:hi('BrightCyanItalic', s:palette.lc, s:palette.none, 'italic')
+call s:hi('BrightBlueItalic', s:palette.lb, s:palette.none, 'italic')
+call s:hi('BrightPurpleItalic', s:palette.lm, s:palette.none, 'italic')
 call s:hi('RedSign', s:palette.r, s:palette.none)
 call s:hi('YellowSign', s:palette.y, s:palette.none)
 call s:hi('GreenSign', s:palette.g, s:palette.none)
@@ -269,14 +283,14 @@ endif
 if (has('termguicolors') && &termguicolors) || has('gui_running')
   " Definition
   let s:terminal = {
-        \ 'black':    &background ==# 'dark' ? s:palette.bg : s:palette.g5,
+        \ 'black':    &background ==# 'dark' ? s:palette.g0 : s:palette.g6,
         \ 'red':      s:palette.r,
         \ 'yellow':   s:palette.y,
         \ 'green':    s:palette.g,
         \ 'cyan':     s:palette.c,
         \ 'blue':     s:palette.b,
         \ 'purple':   s:palette.m,
-        \ 'white':    &background ==# 'dark' ? s:palette.g5 : s:palette.bg
+        \ 'white':    &background ==# 'dark' ? s:palette.g6 : s:palette.g0
         \ }
   " Implementation: {{{
   if !has('nvim')
@@ -321,7 +335,7 @@ highlight! link TSConstMacro CyanItalic
 highlight! link TSConstant GreenItalic
 highlight! link TSConstructor Blue
 highlight! link TSException Purple
-highlight! link TSEnvironment PurpleBright
+highlight! link TSEnvironment BrightPurple
 highlight! link TSEnvironmentName Bright
 highlight! link TSField Grey
 highlight! link TSFloat Green
@@ -340,18 +354,18 @@ highlight! link TSNumber Red
 highlight! link TSOperator Purple
 highlight! link TSParameter BlueItalic
 highlight! link TSParameterReference BlueItalic
-highlight! link TSProperty GreenItalic
+highlight! link TSProperty BlueItalic
 highlight! link TSPunctBracket Grey
 highlight! link TSPunctDelimiter Yellow
 highlight! link TSPunctSpecial Yellow
 highlight! link TSRepeat Purple
-highlight! link TSString GreenBright
+highlight! link TSString BrightPurpleItalic
 highlight! link TSStringEscape Yellow
 highlight! link TSStringRegex Yellow
 highlight! link TSStructure CyanItalic
 highlight! link TSSymbol Red
-highlight! link TSTag RedItalic
-highlight! link TSTagDelimiter Purple
+highlight! link TSTag CyanItalic
+highlight! link TSTagDelimiter Grey
 highlight! link TSText Green
 highlight! link TSStrike Grey
 highlight! link TSMath Yellow
