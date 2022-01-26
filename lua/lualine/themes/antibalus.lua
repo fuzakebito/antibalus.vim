@@ -14,32 +14,32 @@ local colors = {
 return {
   normal = {
     a = {bg = colors.magenta, fg = colors.black0, gui = 'bold'},
-    b = {bg = colors.bg4, fg = colors.white},
+    b = {bg = colors.white, fg = colors.black0},
     c = {bg = colors.black1, fg = colors.white}
   },
   insert = {
-    a = {bg = colors.blue, fg = colors.black0, gui = 'bold'},
-    b = {bg = colors.bg4, fg = colors.white},
+    a = {bg = colors.cyan, fg = colors.black0, gui = 'bold'},
+    b = {bg = colors.white, fg = colors.black0},
     c = {bg = colors.black1, fg = colors.white}
   },
   visual = {
     a = {bg = colors.red, fg = colors.black0, gui = 'bold'},
-    b = {bg = colors.bg4, fg = colors.white},
+    b = {bg = colors.white, fg = colors.black0},
     c = {bg = colors.black1, fg = colors.white}
   },
   replace = {
     a = {bg = colors.yellow, fg = colors.black0, gui = 'bold'},
-    b = {bg = colors.bg4, fg = colors.white},
+    b = {bg = colors.white, fg = colors.black0},
     c = {bg = colors.black1, fg = colors.white}
   },
   command = {
     a = {bg = colors.green, fg = colors.black0, gui = 'bold'},
-    b = {bg = colors.bg4, fg = colors.white},
+    b = {bg = colors.white, fg = colors.black0},
     c = {bg = colors.black1, fg = colors.white}
   },
   terminal = {
     a = {bg = colors.cyan, fg = colors.black0, gui = 'bold'},
-    b = {bg = colors.bg4, fg = colors.white},
+    b = {bg = colors.white, fg = colors.black0},
     c = {bg = colors.black1, fg = colors.white}
   },
   inactive = {
