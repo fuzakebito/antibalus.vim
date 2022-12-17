@@ -1,13 +1,13 @@
 local colors = {
-  bg = '#27262c',
-  black = '#34333e',
-  red = '#cc5655',
-  green = '#4aad78',
-  yellow = '#c99a68',
-  blue ='#809fd1',
-  magenta = '#aa88c8',
-  cyan = '#5aaaaf',
-  white = '#bebdc6',
+  bg = '#202020',
+  black = '#282828',
+  red = '#ef3f5f',
+  green = '#62b283',
+  yellow = '#d19a61',
+  blue ='#759ee2',
+  magenta = '#ad88ce',
+  cyan = '#2db3bb',
+  white = '#d7d7d7',
 }
 
 return {

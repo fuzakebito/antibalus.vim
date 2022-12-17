@@ -12,27 +12,27 @@ endif
 let g:colors_name = 'antibalus'
 
 let s:palette = {
-  \ 'bg': ['#27262c', '235'],
-  \ 'g0': ['#34333e', '237'],
-  \ 'g1': ['#3b3947', '238'],
-  \ 'g2': ['#42404e', '240'],
-  \ 'g3': ['#7e7b8b', '246'],
-  \ 'g4': ['#b4b2bd', '247'],
-  \ 'g5': ['#bebdc6', '249'],
-  \ 'g6': ['#c8c7cd', '250'],
-  \ 'g7': ['#d1d0d7', '252'],
-  \ 'r': ['#cc5655', '167'],
-  \ 'g': ['#4aad78', '72'],
-  \ 'y': ['#c99a68', '173'],
-  \ 'b': ['#809fd1', '110'],
-  \ 'm': ['#aa88c8', '140'],
-  \ 'c': ['#5aaaaf', '73'],
-  \ 'lr': ['#e16966', '203'],
-  \ 'lg': ['#5ec18a', '78'],
-  \ 'ly': ['#dead7a', '180'],
-  \ 'lb': ['#93b2e5', '122'],
-  \ 'lm': ['#bd9bdc', '146'],
-  \ 'lc': ['#6ebdc2', '79'],
+  \ 'bg': ['#202020', '235'],
+  \ 'g0': ['#282828', '237'],
+  \ 'g1': ['#2f2f2f', '238'],
+  \ 'g2': ['#373737', '240'],
+  \ 'g3': ['#808080', '246'],
+  \ 'g4': ['#cfcfcf', '247'],
+  \ 'g5': ['#d7d7d7', '249'],
+  \ 'g6': ['#dedede', '250'],
+  \ 'g7': ['#e6e6e6', '252'],
+  \ 'r': ['#ef3f5f', '167'],
+  \ 'g': ['#62b283', '72'],
+  \ 'y': ['#d19a61', '173'],
+  \ 'b': ['#759ee2', '110'],
+  \ 'm': ['#ad88ce', '140'],
+  \ 'c': ['#2db3bb', '73'],
+  \ 'lr': ['#fd5970', '203'],
+  \ 'lg': ['#7ac095', '78'],
+  \ 'ly': ['#dcab7a', '180'],
+  \ 'lb': ['#89aeeb', '122'],
+  \ 'lm': ['#bb9ad9', '146'],
+  \ 'lc': ['#57c1c8', '79'],
   \ 'none': ['NONE', 'NONE']
   \ }
 
@@ -372,6 +372,6 @@ highlight! link TSMath Yellow
 highlight! link TSType Cyan
 highlight! link TSTypeBuiltin Yellow
 highlight! link TSURI markdownUrl
-highlight! link TSVariable Bright
-highlight! link TSVariableBuiltin Bright
+highlight! link TSVariable Fg
+highlight! link TSVariableBuiltin Fg
 " }}}
